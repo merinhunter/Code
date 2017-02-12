@@ -1,0 +1,21 @@
+<html>
+   <head>
+     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+     <title>Iterator</title>
+     <script type="text/javascript" charset="utf-8">
+       var movie={title: 'The Godfather',
+                  releaseInfo: {year: 1972, rating: 'PG'}
+                };
+       (function iterator () {
+         for (i in movie) {
+           console.log(i + ": ");
+           if(typeof movie[i] == "string")
+            console.log(movie[i]);
+           if(typeof movie[i] == "object")
+             for (ii in movie[i])
+               console.log(ii + ": " + movie[i][ii])
+         }
+       }());
+     </script>
+   </head>
+</html>
